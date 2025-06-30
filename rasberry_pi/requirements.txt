@@ -1,0 +1,8 @@
+opencv-python
+torch
+torchvision
+torchaudio
+easyocr
+pyttsx3
+matplotlib
+numpy

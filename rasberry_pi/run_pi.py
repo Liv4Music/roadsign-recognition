@@ -4,7 +4,6 @@ import easyocr
 import re
 import time
 import pyttsx3
-import subprocess
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.cuda.amp.autocast.*")
 
@@ -12,8 +11,6 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.cuda.
 def run():
     # load model
     model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/last.pt', force_reload=True)
-    # model = torch.jit.load('yolov5/runs/train/speedsign-nano/weights/last.torchscript')
-    # model.eval()
     
     # Load OCR reader
     reader = easyocr.Reader(['en'], gpu=False)
